@@ -1,0 +1,6 @@
+import openai
+
+openai.api_key = "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"
+
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "write an essay about country nepal in 100 words "}])
+print(completion.choices[0].message.content)
